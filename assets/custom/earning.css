@@ -1,0 +1,162 @@
+.earning-page{
+    background-color: #191919;
+}
+.earning-page .section1{
+    padding:200px 10% 100px 10%;
+    min-height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.form-div{
+    min-height: 60vh;
+    border-top:solid 1px gray;
+    border-left:solid 1px gray;
+    border-radius: 10px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.block-div{
+    display: block;
+}
+.block-div label{
+    display: block;
+}
+.block-div input{
+    display: block;
+}
+.inline-div{
+    display: flex;
+    align-items: center;
+}
+
+.inline-div img{
+    height: 20px;
+    margin-left: -30px;
+    margin-right: 10px;
+}
+
+.right-form-div{
+    margin-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left-form-div{
+    max-width:700px;
+    padding:30px 0 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.left-form-div > div{
+    width: 100%;
+    display: block;
+}
+.left-form-div p{
+    font-size: 25px;
+    color: #f33898;
+}
+.form-div label{
+    color: white;
+    font-size: 23px;
+    text-align: left;
+    margin: 25px 0 10px 0;
+}
+.form-div input{
+    width: 80%;
+    min-width: 550px;
+    background-color: transparent;
+    border: 1px solid #f33898;
+    border-radius: 5px;
+    color:white;
+    font-size: 30px;
+    padding:10px;
+}
+.form-div input::before{
+    padding:10px;
+    width:20px;
+    height:20px;
+}
+.form-div input:valid::before, .form-div input:foc::before{
+    content:url(../../image/valid-icon.png);    
+}
+#upload-div{
+    width: 80%;
+    min-width: 550px;
+    justify-content: space-between;
+}
+
+#upload-div input{
+    width: 70% !important;
+    min-width: unset;
+}
+
+#upload-button{
+    background-color: #f33898;
+    border-radius: 5px;
+    border: none;
+    color:black;
+    font-size: 30px;
+    padding:10px;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+
+#upload-button::before{
+    content:url(../../image/arrow-up.png);
+    margin-right:15px;
+}
+#myfile{
+    opacity: 0;
+    font-size:42px;
+    position: absolute;
+    right: 0;
+    top: 0;   
+    cursor: pointer;
+}
+.submit-button{
+    cursor: pointer;
+}
+#thanks-div{
+    width: 420px;
+    height: 420px;
+    background-color: #1e1e1e;
+    border: solid 1px #f33898;
+    border-radius: 20px;
+    display: none;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#thanks-div span{
+    color: #707070;
+    font-style: italic;
+    font-size: 25px;
+    margin-bottom:25px;
+}
+
+@media only screen and (max-width: 1365px){
+    .earning-page .section1{
+        padding:120px 5% 130px 5%;
+    }
+    .form-div{
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-form-div{
+        width:100%;
+    }
+    .right-form-div{
+        width: 100%;
+    }
+    #thanks-div{
+        width: 400px;
+        height: 400px;
+    }
+}

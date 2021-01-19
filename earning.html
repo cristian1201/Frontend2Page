@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/favicon.ico">
+
+    <title>Front2Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/custom/main.css" rel="stylesheet">
+    <link href="assets/custom/earning.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="page-wrapper" style="position: relative;">
+        <!-- Header -->
+        <header id="header">
+            <a href="./index.html"><img class="logo" src="image/logo.png"></a>
+            <button class="login-button text-uppercase">
+                <img src="image/login_button.png">
+                login
+            </button>
+        </header>
+
+        <main>
+            <div class="page earning-page">
+                <div class="section1">
+                    <h1>Tell us about you</h1>
+                    <form class="form-div">
+                        <div class="left-form-div">
+                            <div class="block-div">
+                                <label class="fomr-control">Enter your name</label>
+                                <div class="inline-div">
+                                    <input name="name" type="text">
+                                        <span class="ic"></span>
+                                    </input>
+                                </div>
+                            </div>
+
+                            <div class="block-div">
+                                <label class="fomr-control">Enter your Email</label>
+                                <div class="inline-div">
+                                    <input name="email" type="email"><span class="ic"></span></input>
+                                </div>
+                            </div>
+
+                            <div class="block-div">
+                                <label class="fomr-control">Attach examples of your work</label>
+                                <div class="inline-div" id="upload-div">
+                                    <img src="image/left-icon-selected.png" />
+                                    <input id="file_name" name="file_name" type="text"/>
+                                    <div id="upload-button">
+                                        Upload
+                                        <input name="file" type="file" id="myfile"/>
+                                    </div>
+                                </div>
+                                <p>Upload any videos featuring you, your creative work,
+                                    or past promotions you’ve done</p>
+                            </div>
+
+                            <div class="block-div">
+                                <label class="fomr-control">What is your payment rate for a 15 second video</label>
+                                <div class="inline-div">
+                                    <input name="name" type="text"><span class="ic"></span></input>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-form-div">
+                            <input type="submit" value="" style="display: none;">
+                            <div class="submit-button"><img src="image/submit_button.png" /></div>
+                            <div id="thanks-div">
+                                <h2>Thanks<br/>
+                                for applying</h2>
+                                <h5>We’ll reach out through email</h5>
+                                <span>info@kevinvach.com</span>
+                                <img style="width: 30%;" src="image/asset5.png"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="footer">
+                    <span>Powered by ©Sapphire 2020</span>
+                </div>
+            </div>
+        </main>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+		================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <script src="assets/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            if ($('input').hasClass('invalid')) {
+                $('.valid-icons').hide();
+            }
+            $('#myfile').change(function() {
+                $('#file_name').val($(this).val());
+            });
+            $(".submit-button").click(function(){
+                $(this).hide();
+                $('input').css('color', '#6b6b6b');
+                $('input').attr('disabled', true);
+                $('#upload-button').css('background-color', '#6b6b6b');
+                $('#thanks-div').css('display', 'flex');
+            });
+        });
+    </script>
+</body>
+
+</html>
