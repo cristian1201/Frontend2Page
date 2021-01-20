@@ -1,0 +1,217 @@
+/* @import url('https://fonts.googleapis.com/css?family=SofiaPro%20ExtraLight');
+@import url('https://fonts.googleapis.com/css?family=SofiaPro%20Bold');
+@import url('https://fonts.googleapis.com/css?family=SofiaPro%20ExtraLight');
+@import url('https://fonts.googleapis.com/css?family=SofiaPro%20ExtraLight');
+@import url('https://fonts.googleapis.com/css?family=SofiaPro%20ExtraLight');
+@import url('https://fonts.googleapis.com/css?family=SofiaPro%20ExtraLight'); */
+#page-wrapper{
+    position: relative;
+}
+.primary-color{
+    color: #f33898;
+}
+.secondary-color{
+    color: #009ae6;
+}
+header{
+    z-index: 50;
+    border-bottom: solid 1px #424459;
+    background-color: rgba(0, 0, 0, 0.486);
+}
+div.left-control{
+    z-index: 50;
+}
+div.left-control a{
+    margin:6px 0;
+}
+a.bottom-control{
+    z-index: 50;
+    position:fixed;
+    bottom:5%;
+    left:50%;
+}
+header .logo{
+    height: 32px;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height:80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 10%;
+    border-top: solid 1px #424459;
+    background-color: rgba(0, 0, 0, 0.486);
+}
+#footer span{
+    color: white;
+    font-size: 25px;;
+}
+button.login-button {
+    background-color: #0da8bf;
+    font-size: 20px;
+    color:#050716;
+    font-weight: 600;
+}
+main{
+    z-index: 50;
+}
+div.page{
+    position: relative;
+    width:100%;
+    min-height: 100vh;
+    padding-top:100px;
+    align-items: center;
+}
+div#page1{
+    background-image: url("image/back1.png");
+    background-size:cover;
+}
+div#page2{
+    background-image: url("image/back2.png");
+    background-size:cover;
+}
+div#page3{
+    background-image: url("image/back3.png");
+    background-size:cover;
+}
+div#page4{
+    background-image: url("image/back4.png");
+    background-size:cover;
+    padding-bottom: 80px;
+}
+#page2 .section1{
+    min-height:70vh;
+}
+#page2-laptop{
+    z-index: 20;
+    position: absolute;
+    right:2vw;
+    bottom: 20vh;
+    width:50%;
+}
+#page2-logos{
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    margin:auto;
+    width:100%;
+    bottom:0;
+    background-color: black;
+    height: 30vh;
+    min-height: 200px;
+}
+#page2-logos a{
+    margin: 10px;
+}
+#page2-logos img{
+    height: 30px;
+}
+
+
+h1,h2,h3,h4{
+    color: white;
+    font-family: sofia-pro, sans-serif;
+}
+h1{
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 116%;
+}
+
+h2{
+    font-size: 42px;
+}
+h3{
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 138.5%;
+}
+h4{
+    font-size: 35px;
+}
+p, label, input{
+    font-size: 20px;
+}
+
+
+a.earning{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    max-width: 400px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    background-color: #f33898;
+    border:none;
+    letter-spacing: 5px;
+}
+a.earning::after{
+    content: url(image/right-arrow.png);
+    align-self: center;
+    height:25px;
+    margin-left:10px;
+}
+.flex{
+    display: flex;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.white-quote{
+    text-align: left;
+    border-left: 15px solid white;
+    padding:25px 15px;
+}
+.right-padding{
+    padding-right:20%;
+}
+@media only screen and (max-width: 992px){
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    h3{
+        font-size: 25px;
+    }
+    p, label, input{
+        font-size: 15px;
+    }
+    #page2 .section1{
+        padding-bottom:20vh;
+    }
+
+    a.earning{
+        max-width: 300px;
+        letter-spacing: 3px;
+    }
+    header .logo{
+        height:30px;
+    }
+    div.left-control{
+        left:2%;
+    }
+
+    #page2-logos img{
+        height: 20px;
+    }
+
+}
+@media only screen and (max-width: 992px){
+    .right-padding{
+        padding-right:0;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .white-quote{
+        text-align: center;
+        border:none;
+    }
+}

@@ -10,20 +10,13 @@
 }
 .form-div{
     min-height: 60vh;
-    border-top:solid 1px gray;
-    border-left:solid 1px gray;
-    border-radius: 10px 0 0 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
-.block-div{
-    display: block;
-}
-.block-div label{
-    display: block;
-}
-.block-div input{
-    display: block;
+.bordered{
+    border-top:solid 1px gray;
+    border-left:solid 1px gray;
 }
 .inline-div{
     display: flex;
@@ -56,75 +49,69 @@
     display: block;
 }
 .left-form-div p{
-    font-size: 25px;
     color: #f33898;
 }
 .form-div label{
     color: white;
-    font-size: 23px;
     text-align: left;
     margin: 25px 0 10px 0;
 }
 .form-div input{
     width: 80%;
-    min-width: 550px;
     background-color: transparent;
-    border: 1px solid #f33898;
+    border: 1px solid gray;
     border-radius: 5px;
     color:white;
-    font-size: 30px;
     padding:10px;
 }
-.form-div input::before{
-    padding:10px;
-    width:20px;
-    height:20px;
+.form-div input:valid{
+    border: 1px solid #f33898;
 }
-.form-div input:valid::before, .form-div input:foc::before{
-    content:url(../../image/valid-icon.png);    
+
+.form-div input + *::before{
+    content:url(image/invalid-icon.png);
 }
+
+.form-div input:empty + *::before{
+    content:url(image/invalid-icon.png);
+}
+.form-div input:valid+ *::before, .form-div input:focus::before{
+    content:url(image/valid-icon.png);
+}
+
 #upload-div{
     width: 80%;
-    min-width: 550px;
     justify-content: space-between;
 }
 
-#upload-div input{
-    width: 70% !important;
-    min-width: unset;
-}
 
 #upload-button{
+    width:140px;
     background-color: #f33898;
     border-radius: 5px;
     border: none;
     color:black;
-    font-size: 30px;
+    font-size: 20px;
     padding:10px;
     clear: both;
-    display: inline-block;
     overflow: hidden;
     position: relative;
 }
 
-#upload-button::before{
-    content:url(../../image/arrow-up.png);
-    margin-right:15px;
-}
 #myfile{
     opacity: 0;
-    font-size:42px;
     position: absolute;
     right: 0;
-    top: 0;   
+    top: 0;
     cursor: pointer;
+}
+#file_name{
+    width: 100%;
 }
 .submit-button{
     cursor: pointer;
 }
 #thanks-div{
-    width: 420px;
-    height: 420px;
     background-color: #1e1e1e;
     border: solid 1px #f33898;
     border-radius: 20px;
@@ -145,18 +132,12 @@
     .earning-page .section1{
         padding:120px 5% 130px 5%;
     }
-    .form-div{
-        flex-direction: column;
-        align-items: center;
-    }
+
     .left-form-div{
         width:100%;
     }
     .right-form-div{
         width: 100%;
     }
-    #thanks-div{
-        width: 400px;
-        height: 400px;
-    }
+
 }
