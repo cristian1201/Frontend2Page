@@ -19,10 +19,23 @@ header{
     background-color: rgba(0, 0, 0, 0.486);
 }
 div.left-control{
-    z-index: 50;
+    z-index: 101;
 }
 div.left-control a{
     margin:6px 0;
+    content:url(image/left-icon.png)
+}
+div.left-control a:hover{
+    margin:6px 0;
+    content:url(image/left-icon-selected.png)
+}
+div.left-control a:active{
+    margin:6px 0;
+    content:url(image/left-icon-selected.png)
+}
+div.left-control a.active{
+    margin:6px 0;
+    content:url(image/left-icon-selected.png)
 }
 a.bottom-control{
     z-index: 50;
@@ -106,9 +119,10 @@ div#page4{
 }
 #page2-logos a{
     margin: 10px;
+    display: inline-block;
 }
 #page2-logos img{
-    height: 30px;
+    height: 20px;
 }
 
 
@@ -200,7 +214,7 @@ a.earning::after{
     }
 
     #page2-logos img{
-        height: 20px;
+        /*height: 20px;*/
     }
 
 }

@@ -22,7 +22,6 @@
     display: flex;
     align-items: center;
 }
-
 .inline-div img{
     height: 20px;
     margin-left: -30px;
@@ -59,23 +58,25 @@
 .form-div input{
     width: 80%;
     background-color: transparent;
-    border: 1px solid gray;
-    border-radius: 5px;
     color:white;
     padding:10px;
 }
-.form-div input:valid{
+
+.input-div input{
     border: 1px solid #f33898;
+    border-radius: 5px;
 }
 
-.form-div input + *::before{
-    content:url(image/invalid-icon.png);
+.input-div input:invalid{
+    border: 1px solid gray;
 }
 
-.form-div input:empty + *::before{
+.input-div span.ic{
     content:url(image/invalid-icon.png);
+    margin-left:-20px;
 }
-.form-div input:valid+ *::before, .form-div input:focus::before{
+
+.input-div input:valid + *{
     content:url(image/valid-icon.png);
 }
 

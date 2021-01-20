@@ -43,23 +43,24 @@
             </div>
             <div class="bordered" style="padding-bottom: 80px; margin-left:10%; min-height: 70vh">
                 <form class="form-div justify-content-center">
-                    <div class="col-12 col-lg-6" style="padding-left: 30px; padding-bottom: 30px;">
+                    <div class="col-12 col-lg-6 input-div" style="padding-left: 30px; padding-bottom: 30px;">
                         <label>Enter your name</label>
                         <div>
+                            <span class="ic"></span>
                             <input name="name" type="text">
-                                <span class="ic"></span>
-                            </input>
                         </div>
 
                         <label>Enter your Email</label>
                         <div>
-                            <input name="email" type="email"><span class="ic"></span></input>
+                            <span class="ic"></span>
+                            <input name="email" type="email">
                         </div>
 
                         <label>Attach examples of your work</label>
                         <div class="flex flex-wrap" style="width: 80%">
                             <!--<img src="image/left-icon-selected.png" />-->
-                            <div class="col-md-7 col-12">
+                            <div class="col-md-7 col-12 flex align-items-center">
+                                <span class="ic"></span>
                                 <input id="file_name" name="file_name" type="text"/>
                             </div>
                             <div class="col-md-5 col-12  flex justify-content-md-end">
@@ -74,7 +75,8 @@
 
                         <label>What is your payment rate for a 15 second video</label>
                         <div>
-                            <input name="name" type="text"><span class="ic"></span></input>
+                            <span class="ic"></span>
+                            <input name="name" type="text"/>
                         </div>
                     </div>
                     <div class="col-6 py-5 flex justify-content-center align-items-center" style="padding-right: 10%">
@@ -90,7 +92,7 @@
                     </div>
                 </form>
             </div>
-            <div id="footer">
+            <div id="footer" style="background-color: #0d0d0d">
                 <span>Powered by ©Sapphire 2020</span>
             </div>
         </div>
@@ -107,9 +109,6 @@
 <script src="assets/dist/js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function () {
-        if ($('input').hasClass('invalid')) {
-            $('.valid-icons').hide();
-        }
         $('#myfile').change(function() {
             $('#file_name').val($(this).val());
         });
